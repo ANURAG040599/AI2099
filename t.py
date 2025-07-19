@@ -86,7 +86,7 @@ def data_breach_drone(data_queue):
             report = f"HIT: Identifier found in simulated '{breach}' data breach."
             data_type = "[bold red]SECURITY ALERT[/bold red]"
         else:
-            report = f"Identifier not found in known breach data."
+            report = "Identifier not found in known breach data."
             data_type = "[dim]Search Miss[/dim]"
 
         data_queue.put({"source": f"Drone::{db}", "content": report, "type": data_type})
